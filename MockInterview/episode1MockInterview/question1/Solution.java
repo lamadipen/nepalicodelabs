@@ -40,7 +40,7 @@ class Solution {
     int leftSum = arr[0];
     int rightSum = arr[right];
     int[] leftArray = new int[arr.length];
-    int[] rightArray = new int[arr.lenght];
+    int[] rightArray = new int[arr.length];
 
     while (left < right) {
       if (leftSum < rightSum && left != 0) {
@@ -52,7 +52,7 @@ class Solution {
         rightArray[right] = arr[right];
         right--;
       } else {
-        printResultArray(leftArray, rigthArray);
+        printResultArray(leftArray, rightArray);
         return true;
       }
     }
