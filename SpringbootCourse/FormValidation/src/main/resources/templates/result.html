@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<h1>Result</h1>
+<h3 th:text="'Submitted Name' + ${user.name}"></h3>
+<h3 th:text="'Submitted Email' + ${user.email}"></h3>
+<h3 th:text="'Submitted Age' + ${user.age}"></h3>
+<a href="/getUserForm">Register Again</a>
+</body>
+</html>
