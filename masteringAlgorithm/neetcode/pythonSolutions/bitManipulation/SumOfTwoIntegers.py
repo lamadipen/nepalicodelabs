@@ -1,7 +1,7 @@
 class Solution:
     def getSum(self, a: int, b: int) -> int:
-        MASK=0xFFFFFF
-        MAX=0xFFFFFF
+        MASK=0xFFFFFFFF
+        MAX=0xFFFFFFFF
 
         while b !=0:
             sum_without_carry= (a ^ b) & MASK
