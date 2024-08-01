@@ -36,4 +36,25 @@ class Solution:
         return result
 
     def countComponentsDFS(self, n: int, edges: List[List[int]]) -> int:
-        return  0
+        map = {i: [] for i in range(n)}
+
+        for n1, n2 in edges:
+            map[n1].append(n2)
+            map[n2].append(n1)
+
+        count = 0
+        visited = set()
+
+        def dfs(v):
+            if v not in visited:
+                visited.add(v)
+
+                for c in map[v]:
+                    dfs(c)
+
+        for v in range(n):
+            if v not in visited:
+                count += 1
+                dfs(v)
+
+        return count
