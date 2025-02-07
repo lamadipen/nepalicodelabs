@@ -11,12 +11,16 @@ class TreeNode:
 
 
 class Solution:
+    # Run time O(n) where n is number of nodes
+    # Space Complexity O(H) where h is height of tree
     def preOrderTraversal(self, root: TreeNode):
         if root:
             print(root.val, end=' ')
             self.preOrderTraversal(root.left)
             self.preOrderTraversal(root.right)
 
+    # Run time O(n) where n is number of nodes
+    # Space Complexity O(H) where h is height of tree
     def preOrderTraversalIterative(self, root: TreeNode):
         stack = [root]
 
