@@ -21,7 +21,7 @@ class Solution:
     # Run time O(n) where n is number of nodes
     # Space Complexity O(H) where h is height of tree
     def inorderTraversalIterative(self, root: TreeNode):
-        stack = []
+        stack  = []
         current = root
 
         while current or stack:
@@ -30,7 +30,7 @@ class Solution:
                 current = current.left
 
             current = stack.pop()
-            print(current.val, end=' ')
+            print(current.val,end=' ')
 
             current = current.right
 
@@ -45,3 +45,6 @@ root.left.right = TreeNode(5)
 
 solution = Solution()
 solution.inorderTraversalRecursive(root)
+print()
+print('Iterative Approach')
+solution.inorderTraversalIterative(root)
