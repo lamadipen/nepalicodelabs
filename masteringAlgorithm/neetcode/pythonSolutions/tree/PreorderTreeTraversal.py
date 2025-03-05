@@ -23,7 +23,6 @@ class Solution:
     # Space Complexity O(H) where h is height of tree
     def preOrderTraversalIterative(self, root: TreeNode):
         stack = [root]
-
         while stack:
             current = stack.pop()
             print(current.val, end=' ')
